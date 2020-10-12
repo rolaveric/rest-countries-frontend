@@ -1,0 +1,41 @@
+:host {
+    display: block;
+    margin: 3rem;
+    max-height: 43.75rem; // 700px;
+    max-width: 18.75rem; // 300px;
+    cursor: pointer;
+
+    background-color: var(--rcf-elements-bg-colour, black);
+
+    .rcf-card-img {
+        width: 100%;
+    }
+
+    .rcf-card-title {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .rcf-card-content {
+        padding: 1rem; 
+        font-size: 0.875rem;
+    }
+
+    .rcf-horizontal-dl {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        > dt {
+            flex-basis: 50%;
+            font-weight: bold;
+            &:after {
+                content: ':';
+            }
+        }
+        > dd {
+            flex-basis: 50%;
+            margin-left: 0;
+        }
+    }
+}

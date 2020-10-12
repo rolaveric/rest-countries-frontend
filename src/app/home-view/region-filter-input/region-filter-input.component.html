@@ -1,0 +1,6 @@
+<select [formControl]="formControl">
+  <option value="">Filter by Region</option>
+  <option *ngFor="let region of regionOptions" [value]="region.value">
+    {{ region.label }}
+  </option>
+</select>

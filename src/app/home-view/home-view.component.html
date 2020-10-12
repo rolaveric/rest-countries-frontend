@@ -1,0 +1,16 @@
+<div class="rcf-home-view-filters">
+  <rcf-country-search-input
+    class="rcf-country-search-input"
+    (queryChange)="this.model.updateCountrySearch($event)"
+  ></rcf-country-search-input>
+  <rcf-region-filter-input
+    [regionOptions]="this.model.regionOptions"
+    (regionChange)="this.model.updateCountryRegion($event)"
+  ></rcf-region-filter-input>
+</div>
+<rcf-country-cards>
+  <rcf-country-card
+    *ngFor="let country of model.countries | async"
+    [country]="country"
+  ></rcf-country-card>
+</rcf-country-cards>

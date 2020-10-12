@@ -1,0 +1,33 @@
+<div class="rcf-detail-actions">
+    <button type="button" [routerLink]="'/home'">
+        <fa-icon [icon]="faArrowLeft"></fa-icon> Back
+    </button>
+</div>
+<ng-container *ngIf="model.country | async as country">
+    <img class="rcf-flag-img" [src]="country.flag" alt="{{country.flag}} flag">
+    <h1 class="rcf-country-title">{{country.name}}</h1>
+    <dl class="rcf-horizontal-dl">
+        <dt>Native Name</dt>
+        <dd>{{country.nativeName}}</dd>
+        <dt>Population</dt>
+        <dd>{{country.population | number}}</dd>
+        <dt>Region</dt>
+        <dd>{{country.region}}</dd>
+        <dt>Sub Region</dt>
+        <dd>{{country.subregion}}</dd>
+        <dt>Capital</dt>
+        <dd>{{country.capital}}</dd>
+    </dl>
+    <dl class="rcf-horizontal-dl">
+        <dt>Top Level Domain</dt>
+        <dd>{{country.formattedTopLevelDomain}}</dd>
+        <dt>Currencies</dt>
+        <dd>{{country.formattedCurrencies}}</dd>
+        <dt>Languages</dt>
+        <dd>{{country.formattedLanguages}}</dd>
+    </dl>
+    <div>
+        <strong>Border Countries:</strong>
+        <button *ngFor="let borderName of country.borderNames" class="rcf-border-country-link" [routerLink]="['/country', borderName]">{{ borderName }}</button>
+    </div>
+</ng-container>

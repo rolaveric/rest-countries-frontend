@@ -1,0 +1,31 @@
+:host {
+    .rcf-detail-actions {
+        padding: 1rem;
+    }
+
+    .rcf-flag-img {
+        max-width: 40vw;
+    }
+
+    .rcf-horizontal-dl {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        > dt {
+            flex-basis: 50%;
+            font-weight: bold;
+            &:after {
+                content: ':';
+            }
+        }
+        > dd {
+            flex-basis: 50%;
+            margin-left: 0;
+        }
+    }
+
+    .rcf-border-country-link {
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,29 @@
+html {
+  // Light theme variables
+  --rcf-light-elements-bg-colour: hsl(0, 0%, 100%);
+  --rcf-light-main-bg-colour: hsl(0, 0%, 92%);
+  --rcf-light-text-colour: hsl(200, 15%, 8%);
+  --rcf-light-input-bg-colour: hsl(0, 0%, 52%);
+
+  // Dark theme variables
+  --rcf-dark-elements-bg-colour: hsl(209, 23%, 22%);
+  --rcf-dark-main-bg-colour: hsl(207, 26%, 17%);
+  --rcf-dark-text-colour: hsl(0, 0%, 100%);
+  --rcf-dark-input-bg-colour: hsl(209, 23%, 22%);
+
+  // Active theme variables - start as light theme
+  --rcf-elements-bg-colour: var(--rcf-light-elements-bg-colour);
+  --rcf-main-bg-colour: var(--rcf-light-main-bg-colour);
+  --rcf-text-colour: var(--rcf-light-text-colour);
+  --rcf-input-bg-colour: var(--rcf-light-input-bg-colour);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px; // 1rem
+  background-color: var(--rcf-main-bg-colour);
+  color: var(--rcf-text-colour);
+}

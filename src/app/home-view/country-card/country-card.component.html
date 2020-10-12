@@ -1,0 +1,12 @@
+<img class="rcf-card-img" [src]="country.flag" alt="{{country.flag}} flag">
+<div class="rcf-card-content">
+    <span class="rcf-card-title">{{country.name}}</span>
+    <dl class="rcf-horizontal-dl">
+        <dt>Population</dt>
+        <dd>{{country.population | number}}</dd>
+        <dt>Region</dt>
+        <dd>{{country.region}}</dd>
+        <dt>Capital</dt>
+        <dd>{{country.capital}}</dd>
+    </dl>
+</div>
